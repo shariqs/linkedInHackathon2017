@@ -11,7 +11,10 @@ import { StateService } from '../Services/state.service';
 export class ListComponent {
 
   shouldRenameList : boolean = false;
-  list_name_form : string = 'Enter List Name!';
+  showNewItemNameComboBox : boolean = false;
+
+  list_name_form : string = '';
+  item_name_form : string = '';
 
   constructor(public dataService : DataService, public stateService : StateService ) { }
 
@@ -23,6 +26,19 @@ export class ListComponent {
   private onlistRename(){
     //this.dataService.updateUserList(this.list_name_form);
    // this.shouldRenameList = false;
+  }
+
+  private addItemButtonPressed() {
+    this.showNewItemNameComboBox = !this.showNewItemNameComboBox;
+    //this.dataService.addItemToList(this.stateService.active_list.$key);
+  }
+
+   private onItemSubmit(){
+
+    this.dataService.addItemToList(this.stateService.active_list.$key, this.item_name_form);
+
+   this.shouldRenameList = false;
+   this.item_name_form = '';
   }
 
   private itemRemoveButtonClicked(index : number){

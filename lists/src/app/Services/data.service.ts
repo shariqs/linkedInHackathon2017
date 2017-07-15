@@ -36,6 +36,15 @@ export class DataService {
         this.addListToUser(listInfo.key)
     }
 
+    public addItemToList(key : string, itemName: string) {
+        var ar = this.dataCache[key].list_items;
+        if(ar == undefined){
+            ar = [];
+        }
+        ar.push(itemName);
+        this.updateListItems(key, ar);
+    }
+
     private fillCacheByKey(listKey) {
         this.db.object('/Lists/' + listKey).subscribe(listData => {
             this.dataCache[listKey] = listData;
