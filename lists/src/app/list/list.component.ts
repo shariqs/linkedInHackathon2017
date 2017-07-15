@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../Services/data.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
-  list_name_form : string = ''              // String that represents the list name
-  shouldRenameList : boolean = false;       // Boolean that allows list renaming
+  shouldRenameList : boolean = false;
+  list_name_form : string = 'Enter List Name!';
 
-  constructor() { }
+  constructor(public dataService : DataService ) { }
 
-  ngOnInit() {
-  }
-
-  private renameListButtonClicked() {
+  private newListButtonClicked(){
     this.shouldRenameList = true;
+    //this.dataService.createList();
   }
 
-  private onListRename() {
-    this.shouldRenameList = false;
-    this.list_name_form = '';
+  private onlistRename(){
+    //this.dataService.updateUserList(this.list_name_form);
+   // this.shouldRenameList = false;
   }
 }

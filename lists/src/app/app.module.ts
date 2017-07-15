@@ -16,7 +16,8 @@ import { DataService } from './Services/data.service';
 import { StateService } from './Services/state.service';
 
 import { ListComponent } from './list/list.component';
-//import { SidebarComponent } from './sidebar/sidebar.component';
+
+
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyCDuFUbKOsVHSzhO3p3EtR3DOxAa0pUsK4",
