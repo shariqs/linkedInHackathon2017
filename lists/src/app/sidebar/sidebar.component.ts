@@ -30,8 +30,8 @@ export class SidebarComponent {
     }    
   }
   
-  private listChosen(list : any) {    
-    this.stateService.active_list = this.dataService.getListCacheDataFromKey(list.$value);
+  private listChosen(list : any) {
+    this.stateService.active_list = list.$value;
    
   }
 

@@ -23,8 +23,8 @@ export class ListComponent {
   }
 
   private onlistRename(){
-    this.stateService.active_list.name = this.list_name_form;
-    this.dataService.updateUserList(this.list_name_form, this.stateService.active_list.$key);
+    //this.stateService.active_list.name = this.list_name_form;
+    this.dataService.updateUserList(this.list_name_form, this.stateService.active_list);
     this.shouldRenameList = false;
   }
 
@@ -35,16 +35,16 @@ export class ListComponent {
 
    private onItemSubmit(){
 
-    this.dataService.addItemToList(this.stateService.active_list.$key, this.item_name_form);
+    this.dataService.addItemToList(this.stateService.active_list, this.item_name_form);
 
    this.shouldRenameList = false;
    this.item_name_form = '';
   }
 
   private itemRemoveButtonClicked(index : number){
-    var listKey = this.stateService.active_list.$key;
-    var ar = this.stateService.active_list.list_items;
-    ar.splice(index, 1);
-    this.dataService.updateListItems(listKey, ar);
+    var listKey = this.stateService.active_list;
+
+    this.dataService.removeItemFromList(listKey, index);
+
   }
 }
