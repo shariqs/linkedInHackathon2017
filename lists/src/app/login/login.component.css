@@ -1,0 +1,12 @@
+ button {
+      margin: 5px 20px;
+  }
+  
+  #greeting {
+      color:#C5CCD0;
+  }
+
+  .login-font {
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+  }

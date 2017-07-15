@@ -7,7 +7,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
+
+import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyCDuFUbKOsVHSzhO3p3EtR3DOxAa0pUsK4",
@@ -21,7 +24,9 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent],
+    AppComponent,
+  LoginComponent,
+  SidebarComponent],
 
   imports: [
     BrowserModule,
