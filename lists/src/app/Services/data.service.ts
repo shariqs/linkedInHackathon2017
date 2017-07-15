@@ -70,11 +70,6 @@ export class DataService {
         return this.dataCache[key];
     }
 
-    //Doesn't Work
-    private removeListByKey(key: string) {
-        this.db.object('/Users/' + this.auth.uid + '/Lists/' + key).remove();
-    }
-
     private removeListByIndex(index: number) {
         var key = this.listKeys[index].$key;
         this.db.object('/Users/' + this.auth.uid + '/Lists/' + key).remove();
@@ -86,6 +81,14 @@ export class DataService {
 
    public updateUserList(newName : string, listKey : string){
        this.db.object('/Lists/' + listKey + '/name/').set(newName);
+   }
+
+   public removeItemFromList(listKey : string, index : number){
+    
+    var ar = this.dataCache[listKey].list_items;
+    ar.splice(index, 1);
+    this.updateListItems(listKey, ar);
+
    }
     
 }

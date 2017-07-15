@@ -2,18 +2,21 @@
   <div id="header">
   
     <!-- Display List Name-->
-    <li class="nameDisplay" *ngIf="!shouldRenameList" (dblclick)='newListButtonClicked()'> {{ stateService.active_list?.name }}</li>
+    <li class="nameDisplay" *ngIf="!shouldRenameList" (dblclick)='newListButtonClicked()'> {{ dataService.getListCacheDataFromKey(stateService.active_list)?.name }}</li>
 
     <!-- Rename List -->
     <li class="renameDisplay" *ngIf="shouldRenameList">
       <input autofocus class="form-control" [(ngModel)]="list_name_form" (keydown.enter)="onlistRename()" placeholder="" (keydown.esc)="shouldRenameList = false">
     </li>
   </div>
+    
+     
     <div class="content" *ngIf = 'stateService.active_list'>
-      <li *ngIf="!showNewItemNameComboBox" class="list-group-item tile" style="font-weight:bold; color:#464133;" (click)='addItemButtonPressed()'> + </li>
-      <li class="list-group-item tile" *ngIf="showNewItemNameComboBox"><input autofocus class="form-control" [(ngModel)]="item_name_form" (keydown.enter)="onItemSubmit()" placeholder="Enter Item" (keydown.esc)="showNewItemNameComboBox = false"></li>
-      <li class="list-group-item tile" *ngFor="let item of stateService.active_list?.list_items; let i = index">{{ item }}
-        <i class='glyphicon glyphicon-remove' (click)='itemRemoveButtonClicked(i)'> </i>
-      </li>
-    </div>
+  <li *ngIf="!showNewItemNameComboBox" class="list-group-item tile" style="font-weight:bold; color:#464133;" (click)='addItemButtonPressed()'> + </li>
+   <li class="list-group-item tile" *ngIf="showNewItemNameComboBox"><input autofocus class="form-control" [(ngModel)]="item_name_form" (keydown.enter)="onItemSubmit()" placeholder="Enter Item" (keydown.esc)="showNewItemNameComboBox = false"></li>
+  <li class="list-group-item tile" *ngFor="let item of dataService.getListCacheDataFromKey(stateService.active_list).list_items; let i = index">{{ item }}
+    <i class='glyphicon glyphicon-remove' (click)='itemRemoveButtonClicked(i)'> </i>
+  </li>
+  </div>
+ 
 </div>
