@@ -1,3 +1,5 @@
+<div id="login">
 <button class="btn btn-primary" *ngIf="!auth" (click)="loginGoogle()"> Login With Google </button>
 <span *ngIf="auth" id='greeting' class="login-font"> Welcome, {{ auth?.displayName}}</span>
 <button class="btn btn-danger login-font" *ngIf="auth" (click)="logout()"> Logout </button>
+</div>
