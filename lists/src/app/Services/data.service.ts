@@ -74,6 +74,10 @@ export class DataService {
    public updateListItems(key : string, array : any){
        this.db.object('/Lists/' + key + '/list_items/').set(array);
    }
+
+   public updateUserList(newName : string, listKey : string){
+       this.db.object('/Lists/' + listKey + '/name/').set(newName);
+   }
     
 }
 
