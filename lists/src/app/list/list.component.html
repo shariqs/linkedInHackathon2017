@@ -1,6 +1,6 @@
 <div id="wrapper">
   <div id="header">
-  
+      
     <!-- Display List Name-->
     <li class="nameDisplay" *ngIf="!shouldRenameList" (dblclick)='newListButtonClicked()'> {{ dataService.getListCacheDataFromKey(stateService.active_list)?.name }}</li>
 

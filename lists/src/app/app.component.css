@@ -5,7 +5,9 @@ app-sidebar{
     background-color:#F9C728;
 }
 app-login{
-    float: right;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
 }
 #verticalbar {
     position: absolute;
@@ -13,4 +15,11 @@ app-login{
     width:1%;
     height: 100%;
     background-color:#EF5F28;
+}
+app-list {
+    position: absolute;
+    width: 79%;
+    height: 100%;
+    left: 21%;
+    overflow-y: scroll;
 }

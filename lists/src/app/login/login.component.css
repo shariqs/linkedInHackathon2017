@@ -11,9 +11,6 @@
       font-family: 'Open Sans', sans-serif;
   }
   #login {
-      z-index: 1;
-      position: absolute;
-      right: 0px;
       min-width: 100px;
       min-height: 10px;
       background-color: transparent;

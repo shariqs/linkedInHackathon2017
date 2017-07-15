@@ -1,9 +1,6 @@
 #wrapper {
-    width: 79%;
-    min-height: 50px;
-    background-color: transparent;
-    position: absolute;
-    left: 21%;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 .tile {
@@ -55,7 +52,7 @@ li {
     width: 100%;
     min-height: 25px;
     background-color: #F9C728;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .form-control{
