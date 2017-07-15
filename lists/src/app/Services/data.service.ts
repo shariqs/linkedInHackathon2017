@@ -15,7 +15,6 @@ export class DataService {
         afAuth.authState.subscribe(auth => {
             if (auth) {
                 this.auth = auth;
-
                 this.db.list('/Users/' + auth.uid + '/Lists/').subscribe(userKeyData => {
                     for (var i = 0; i < userKeyData.length; i++) {
                         var listKey = userKeyData[i].$value;
@@ -41,7 +40,12 @@ export class DataService {
         if(ar == undefined){
             ar = [];
         }
-        ar.push(itemName);
+        ar.push({
+            name: itemName,
+            checked: false,
+            author: this.auth.displayName   
+        }
+        );
         this.updateListItems(key, ar);
     }
 
@@ -56,9 +60,7 @@ export class DataService {
             if(data.name){
                 this.db.list('/Users/' + this.auth.uid + '/Lists/').push(listKey);
             }
-        });
-
-       
+        });       
     }
 
 
@@ -84,12 +86,15 @@ export class DataService {
    }
 
    public removeItemFromList(listKey : string, index : number){
-    
     var ar = this.dataCache[listKey].list_items;
     ar.splice(index, 1);
     this.updateListItems(listKey, ar);
-
    }
+
+   public toggleChecked(listKey: string, index: number, currentState: boolean){
+       this.db.object('/Lists/' + listKey + '/list_items/'+ index + '/checked').set(!currentState);
+   }
+
     
 }
 

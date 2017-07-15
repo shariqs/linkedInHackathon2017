@@ -10,14 +10,44 @@
     border-bottom: 2px solid #667A8C;
     height: 50px;
     font-size: 20px;
+
+     -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
+.tile:hover {
+    background-color: #D8AE24;
+}
 .glyphicon-remove{
     float: right;
 }
 
 .glyphicon-plus{
     color: black;
+}
+
+.glyphicon-ok{
+    float: left;
+    font-size: 27px;
+    color: black;
+    opacity: .25;
+}
+
+.glyphicon-ok:hover{
+    opacity: .70;
+}
+
+.checked{
+    color:green;
+    opacity: 1;
+}
+.glyphicon:hover {
+    text-decoration: none;
 }
 #header {
     width: 100%;
@@ -62,8 +92,4 @@ li {
 
 .form-control{
     text-align: center;
-}
-
-#new-item-tile{
-   
 }

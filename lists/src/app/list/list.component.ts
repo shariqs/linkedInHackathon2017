@@ -30,21 +30,23 @@ export class ListComponent {
 
   private addItemButtonPressed() {
     this.showNewItemNameComboBox = !this.showNewItemNameComboBox;
-    //this.dataService.addItemToList(this.stateService.active_list.$key);
   }
 
    private onItemSubmit(){
-
-    this.dataService.addItemToList(this.stateService.active_list, this.item_name_form);
-
+   this.dataService.addItemToList(this.stateService.active_list, this.item_name_form);
    this.shouldRenameList = false;
    this.item_name_form = '';
   }
 
   private itemRemoveButtonClicked(index : number){
     var listKey = this.stateService.active_list;
-
     this.dataService.removeItemFromList(listKey, index);
-
   }
+
+  private checkedClicked(index : number, item: any){
+    this.dataService.toggleChecked(this.stateService.active_list, index, item.checked);
+   
+  }
+
+
 }
