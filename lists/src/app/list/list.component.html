@@ -6,7 +6,7 @@
 
     <!-- Rename List -->
     <li class="renameDisplay" *ngIf="shouldRenameList">
-      <input autofocus class="form-control" [(ngModel)]="list_name_form" (keydown.enter)="onlistRename()" placeholder="Enter List Name" (keydown.esc)="shouldRenameList = false">
+      <input autofocus class="form-control" [(ngModel)]="list_name_form" (keydown.enter)="onlistRename()" placeholder="" (keydown.esc)="shouldRenameList = false">
     </li>
   </div>
   <li *ngIf="!showNewItemNameComboBox" class="list-group-item tile" style="font-weight:bold; color:#464133;" (click)='addItemButtonPressed()'> + </li>

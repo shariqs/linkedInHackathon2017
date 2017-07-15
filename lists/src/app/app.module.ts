@@ -16,6 +16,7 @@ import { DataService } from './Services/data.service';
 import { StateService } from './Services/state.service';
 
 import { ListComponent } from './list/list.component';
+import { ListItemComponent } from './list-item/list-item.component';
 
 
 // Must export the config
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     AppComponent,
   LoginComponent,
   ListComponent,
-  SidebarComponent
+  SidebarComponent,
+  ListItemComponent
   ],
 
   imports: [

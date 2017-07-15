@@ -20,12 +20,12 @@ export class ListComponent {
 
   private newListButtonClicked(){
     this.shouldRenameList = true;
-    //this.dataService.createList();
   }
 
   private onlistRename(){
-    //this.dataService.updateUserList(this.list_name_form);
-   // this.shouldRenameList = false;
+    this.stateService.active_list.name = this.list_name_form;
+    this.dataService.updateUserList(this.list_name_form, this.stateService.active_list.$key);
+    this.shouldRenameList = false;
   }
 
   private addItemButtonPressed() {
