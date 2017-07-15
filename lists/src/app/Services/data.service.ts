@@ -56,7 +56,7 @@ export class DataService {
     }
 
     public addListToUser(listKey: String) {
-        this.db.object('/Lists/' + listKey).subscribe(data => {
+        this.db.object('/Lists/' + listKey).take(1).subscribe(data => {
             if(data.name){
                 this.db.list('/Users/' + this.auth.uid + '/Lists/').push(listKey);
             }
