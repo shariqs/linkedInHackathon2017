@@ -1,0 +1,78 @@
+#wrapper {
+    width: 75%;
+    min-height: 50px;
+    background-color: orange;
+}
+
+#header {
+    width: 100%;
+    min-height: 20px;
+    background-color: pink;
+}
+
+.nameDisplay {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    font-style: normal;
+}
+
+.renameDisplay {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#titles {
+    width: 100%;
+    min-height: 10px;
+    background-color: blue;
+}
+
+/* Title table */
+table {
+    width: 100%;
+    min-height: 100%;
+    font: 18px;
+    font-weight: bold;
+}
+
+/* Table data's left column */
+#tdLeft {
+    width: 10%;
+    min-height: 100%;
+    background-color: silver;
+    text-align: center;
+}
+
+/* Table data's right column */
+#tdRight {
+    width: 90%;
+    min-height: 100%;
+    background-color: grey;
+    text-align: center;
+}
+
+/* Left column for content */
+#leftColumn {
+    width: 10%;
+    min-height: 50px;
+    background-color: green;
+    float: left;
+}
+
+/* Right column for content */
+#rightColumn {
+    width: 90%;
+    min-height: 50px;
+    background-color: red;
+    float: left;
+}
+
+/* Invisible footer for clearning the columns above */
+#footer {
+    width: 100%;
+    height: 0px;
+    clear: both;
+}

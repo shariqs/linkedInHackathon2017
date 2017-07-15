@@ -1,0 +1,27 @@
+<div id="wrapper">
+  <div id="header">
+
+    <!-- If not double-clicked, display list name -->
+    <li *ngIf="!shouldRenameList" class="nameDisplay" (dblclick)="shouldRenameList = !shouldRenameList">
+        Enter List Name
+    </li>
+
+    <!-- If double-clicked, change list name -->
+    <li *ngIf="showPlaylistInput">
+      <input autofocus (ngModel)]="list_name_form" class="renameDisplay" (keydown.enter)="onPlaylistSubmit()" placeholder="Enter List Name" (keydown.esc)="shouldRenameList = !shouldRenameList">
+      { list_name_form }
+    </li>
+
+  </div>
+  <div id="titles">
+    <table>
+      <tr>
+        <td id="tdLeft">Replenish</td>
+        <td id="tdRight">Items</td>
+      </tr>
+    </table>
+  </div>
+  <div id="leftColumn"></div>
+  <div id="rightColumn"></div>
+  <div id="footer"></div>
+</div>

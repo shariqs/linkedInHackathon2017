@@ -10,7 +10,8 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { ListComponent } from './list/list.component';
+//import { SidebarComponent } from './sidebar/sidebar.component';
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyCDuFUbKOsVHSzhO3p3EtR3DOxAa0pUsK4",
@@ -26,7 +27,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
   LoginComponent,
-  SidebarComponent],
+  ListComponent,
+  //SidebarComponent
+  ],
 
   imports: [
     BrowserModule,
