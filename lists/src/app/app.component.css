@@ -1,9 +1,16 @@
 app-sidebar{
     position: absolute;
-    width: 25%;
+    width: 20%;
     height: 100%;
-    background-color: pink;
+    background-color:#F9C728;
 }
 app-login{
     float: right;
+}
+#verticalbar {
+    position: absolute;
+    left: 20%;
+    width:1%;
+    height: 100%;
+    background-color:#EF5F28;
 }

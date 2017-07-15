@@ -7,4 +7,10 @@
 
 .tile{
     text-align: center;
+    border-bottom: 3px solid #667A8C;
+    background-color: #F9C728;
+}
+
+.tile:hover {
+    background-color: #D8AE24;
 }
