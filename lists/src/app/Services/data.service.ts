@@ -4,7 +4,6 @@ import 'rxjs/add/operator/take'
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Http } from '@angular/http';
 
-
 @Injectable()
 export class DataService {
     private auth;
@@ -71,5 +70,10 @@ export class DataService {
         var key = this.listKeys[index].$key;
         this.db.object('/Users/' + this.auth.uid + '/Lists/' + key).remove();
     }
+
+   public updateListItems(key : string, array : any){
+       this.db.object('/Lists/' + key + '/list_items/').set(array);
+   }
+    
 }
 

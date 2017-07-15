@@ -32,9 +32,7 @@ export class SidebarComponent {
   
   private listChosen(list : any) {    
     this.stateService.active_list = this.dataService.getListCacheDataFromKey(list.$value);
-    console.log(this.dataService.getListCacheDataFromKey(list.$value));
+   
   }
-  private click(){
-    console.log(this.dataService.dataCache);
-  }
+
 }

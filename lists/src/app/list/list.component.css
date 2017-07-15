@@ -1,9 +1,20 @@
 #wrapper {
     width: 79%;
     min-height: 50px;
-    background-color: orange;
+    background-color: transparent;
     position: absolute;
     left: 21%;
+}
+
+.tile {
+    color:black;
+    text-align: center;
+    background-color: #F9C728;
+    border-bottom: 2px solid #667A8C;
+}
+
+.glyphicon-remove{
+    float: right;
 }
 
 #header {
@@ -36,20 +47,12 @@ li {
 #titles {
     width: 100%;
     min-height: 10px;
-    background-color: blue;
+    background-color: transparent;
 }
 
 /* Right column for content */
 #content {
     width: 100%;
-    min-height: 50px;
-    background-color:#F9C728;
-    float: left;
-}
-
-/* Invisible footer for clearning the columns above */
-#footer {
-    width: 100%;
-    height: 0px;
-    clear: both;
+    min-height: 25px;
+    background-color:green;;
 }

@@ -8,8 +8,10 @@
     <li class="renameDisplay" *ngIf="shouldRenameList">
       <input autofocus class="form-control" [(ngModel)]="list_name_form" (keydown.enter)="onlistRename()" placeholder="Enter List Name" (keydown.esc)="shouldRenameList = false">
     </li>
-
   </div>
-  <div id="content"></div>
-  <div id="footer"></div>
+  <li class="list-group-item tile" *ngFor="let item of stateService.active_list?.list_items; let i = index">{{ item }}
+    <i class='glyphicon glyphicon-remove' (click)='itemRemoveButtonClicked(i)'> </i>
+  </li>
+
+ 
 </div>
