@@ -7,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  list_name_form = ''
-  shouldRenameList = false;       // Boolean that allows list renaming
+  list_name_form : string = ''              // String that represents the list name
+  shouldRenameList : boolean = false;       // Boolean that allows list renaming
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  renameList() {
-    
+  private renameListButtonClicked() {
+    this.shouldRenameList = true;
   }
 
+  private onListRename() {
+    this.shouldRenameList = false;
+    this.list_name_form = '';
+  }
 }
