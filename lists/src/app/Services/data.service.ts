@@ -12,7 +12,6 @@ export class DataService {
     public dataCache = [];
     public listKeys = [];
 
-
     constructor(public afAuth: AngularFireAuth, public db: AngularFireDatabase, public http: Http) {
         afAuth.authState.subscribe(auth => {
             if (auth) {
@@ -37,6 +36,11 @@ export class DataService {
             });
             this.addListToUser(listInfo.key)
     }
+
+    private updateListName(name: string) {
+           // this.db.list('Lists/').set()
+            //this.addListToUser(listInfo.key)
+    }
     
     private fillCacheByKey(listKey){
          this.db.object('/Lists/' + listKey).subscribe(listData => {
@@ -44,8 +48,12 @@ export class DataService {
                         });
     }
 
-    public addListToUser(listKey : String){
-        this.db.list('/Users/' + this.auth.uid + '/Lists/').push(listKey);
+    public addListToUser(listKey: String) {
+       this.db.object('/Lists/' + listKey).subscribe(data => {
+           if(data.name){
+               this.db.list('/Users/' + this.auth.uid + '/Lists/').push(listKey);
+           }
+       });
     }
 
 
@@ -59,15 +67,12 @@ export class DataService {
 
     //Doesn't Work
     private removeListByKey(key : string) {
-        //console.log('/Users/' + this.auth.uid + '/Lists/'+ key);
         this.db.object('/Users/' + this.auth.uid + '/Lists/'+ key).remove();
     }
 
-        private removeListByIndex(index : number) {
-        var key = this.listKeys[index].$key;
-
-        //console.log('/Users/' + this.auth.uid + '/Lists/'+ key);
-        this.db.object('/Users/' + this.auth.uid + '/Lists/'+ key).remove();
-    }
+    private removeListByIndex(index: number) {
+       var key = this.listKeys[index].$key;
+       this.db.object('/Users/' + this.auth.uid + '/Lists/' + key).remove();
+   }
 }
 
