@@ -1,0 +1,9 @@
+app-sidebar{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: pink;
+}
+app-login{
+    float: right;
+}

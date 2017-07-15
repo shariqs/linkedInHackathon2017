@@ -11,6 +11,9 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+
+import { DataService } from './Services/data.service';
+
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyCDuFUbKOsVHSzhO3p3EtR3DOxAa0pUsK4",
@@ -38,7 +41,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
