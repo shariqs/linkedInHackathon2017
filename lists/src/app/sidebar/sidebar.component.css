@@ -1,5 +1,13 @@
 .btn {
+    width: 20%;
+    position:fixed;
+    left: 0px;
+    z-index: 2;
+}
+#break {
+    height: 29px;
     width: 100%;
+    background-color:transparent;
 }
 .glyphicon-remove{
     float: right;
@@ -7,7 +15,7 @@
 
 .tile{
     text-align: center;
-    border-top: 2px solid #667A8C;
+    border-top: 3px solid #667A8C;
     background-color: #F9C728;
 }
 
