@@ -24,4 +24,11 @@ export class ListComponent {
     //this.dataService.updateUserList(this.list_name_form);
    // this.shouldRenameList = false;
   }
+
+  private itemRemoveButtonClicked(index : number){
+    var listKey = this.stateService.active_list.$key;
+    var ar = this.stateService.active_list.list_items;
+    ar.splice(index, 1);
+    this.dataService.updateListItems(listKey, ar);
+  }
 }
