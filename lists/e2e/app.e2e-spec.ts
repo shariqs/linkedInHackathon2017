@@ -1,10 +1,10 @@
-import { ListsPage } from './app.po';
+import { MusiQFrontPage } from './app.po';
 
-describe('lists App', () => {
-  let page: ListsPage;
+describe('musi-q-front App', function() {
+  let page: MusiQFrontPage;
 
   beforeEach(() => {
-    page = new ListsPage();
+    page = new MusiQFrontPage();
   });
 
   it('should display message saying app works', () => {

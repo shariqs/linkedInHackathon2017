@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class ListsPage {
+export class MusiQFrontPage {
   navigateTo() {
     return browser.get('/');
   }
