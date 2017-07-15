@@ -6,8 +6,7 @@
 .tile {
     color:black;
     background-color: transparent;
-    height: 50px;
-    font-size: 20px;
+    font-size: 14px;
 
      -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -18,24 +17,34 @@
                                   supported by Chrome and Opera */
     border-bottom: 3px solid #667A8C;
     min-height: 40px;
+    text-indent: 15px;
 }
 
 .tile:hover {
     background-color: #D8AE24;
-}
-.glyphicon-remove{
-    float: right;
 }
 
 .glyphicon-plus{
     color: black;
 }
 
+.username {
+    font-size: 12px;
+    color: #000;
+    opacity: .2;
+    float: right;
+}
+
+.glyphicon-remove{
+    float: right;
+}
+
 .glyphicon-ok{
     float: left;
-    font-size: 27px;
+    font-size: 20px;
     color: black;
     opacity: .25;
+    line-height: 15px;
 }
 
 .glyphicon-ok:hover{

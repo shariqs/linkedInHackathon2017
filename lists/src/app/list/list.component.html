@@ -18,9 +18,12 @@
    <li class="list-group-item tile" *ngIf="showNewItemNameComboBox"><input autofocus class="form-control" [(ngModel)]="item_name_form" (keydown.enter)="onItemSubmit()" placeholder="Enter Item" (keydown.esc)="showNewItemNameComboBox = false"></li>
   <li class="list-group-item tile" *ngFor="let item of dataService.getListCacheDataFromKey(stateService.active_list).list_items; let i = index" (dblclick)='checkedClicked(i, item)'>
     <a class='glyphicon glyphicon-ok' [class.checked]='item.checked' (click)='checkedClicked(i, item)'> </a>
-    {{ item.name | uppercase}}
+    {{ item.name | uppercase}}  
     <i class='glyphicon glyphicon-remove' (click)='itemRemoveButtonClicked(i)'> </i>
+    <span class="username"> -{{ item.author }} </span> 
   </li>
+
+  
   </div>
  
 </div>
