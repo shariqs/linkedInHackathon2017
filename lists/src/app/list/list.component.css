@@ -57,7 +57,7 @@ li {
     width: 100%;
     min-height: 25px;
     background-color: #F9C728;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .form-control{
