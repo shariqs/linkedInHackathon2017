@@ -3,11 +3,21 @@ app-sidebar{
     width: 20%;
     height: 100%;
     background-color:#F9C728;
+    overflow-y: auto;
 }
-app-login{
+#appdiv {
+    width: 79%;
+    min-height: 5px;
+    background-color: transparent;
     position: absolute;
+    Left: 21%;
+    z-index: 10;
+}
+app-login {
+    position: relative;
     right: 0px;
     z-index: 1;
+    text-align: right;
 }
 #verticalbar {
     position: absolute;
