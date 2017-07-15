@@ -8,6 +8,8 @@ import { Http } from '@angular/http';
 export class StateService {
     private auth;
 
+    public active_list = null;
+
     constructor(public afAuth: AngularFireAuth, public db: AngularFireDatabase, public http: Http) {
         afAuth.authState.subscribe(auth => {
             if (auth) {

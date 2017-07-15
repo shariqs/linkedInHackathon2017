@@ -9,7 +9,7 @@
     <!-- If double-clicked, change list name -->
     <li *ngIf="showPlaylistInput">
       <input autofocus (ngModel)]="list_name_form" class="renameDisplay" (keydown.enter)="onPlaylistSubmit()" placeholder="Enter List Name" (keydown.esc)="shouldRenameList = !shouldRenameList">
-      { list_name_form }
+      {{ list_name_form }}
     </li>
 
   </div>
