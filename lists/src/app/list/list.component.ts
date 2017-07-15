@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../Services/data.service';
+import { StateService } from '../Services/state.service';
+
 
 @Component({
   selector: 'app-list',
@@ -11,7 +13,7 @@ export class ListComponent {
   shouldRenameList : boolean = false;
   list_name_form : string = 'Enter List Name!';
 
-  constructor(public dataService : DataService ) { }
+  constructor(public dataService : DataService, public stateService : StateService ) { }
 
   private newListButtonClicked(){
     this.shouldRenameList = true;

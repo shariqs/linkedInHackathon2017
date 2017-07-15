@@ -8,19 +8,20 @@
 
 #header {
     width: 100%;
-    min-height: 20px;
+    min-height: 90px;
     background-color: pink;
+    padding-top: 20px;
 }
 
 li {
     text-decoration: none;
-    list-style:none;
+    list-style: none;
 }
 
 .nameDisplay {
     text-align: center;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 32px;
     font-style: normal;
 }
 
@@ -37,41 +38,9 @@ li {
     background-color: blue;
 }
 
-/* Title table */
-table {
-    width: 100%;
-    min-height: 100%;
-    font: 18px;
-    font-weight: bold;
-}
-
-/* Table data's left column */
-#tdLeft {
-    width: 10%;
-    min-height: 100%;
-    background-color: silver;
-    text-align: center;
-}
-
-/* Table data's right column */
-#tdRight {
-    width: 90%;
-    min-height: 100%;
-    background-color: grey;
-    text-align: center;
-}
-
-/* Left column for content */
-#leftColumn {
-    width: 10%;
-    min-height: 50px;
-    background-color: green;
-    float: left;
-}
-
 /* Right column for content */
-#rightColumn {
-    width: 90%;
+#content {
+    width: 100%;
     min-height: 50px;
     background-color: red;
     float: left;

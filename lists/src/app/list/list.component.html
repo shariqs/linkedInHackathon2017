@@ -2,7 +2,7 @@
   <div id="header">
   
     <!-- Display List Name-->
-    <li class="nameDisplay" *ngIf="!shouldRenameList" (dblclick)='newListButtonClicked()'>{{ list_name_form }}</li>
+    <li class="nameDisplay" *ngIf="!shouldRenameList" (dblclick)='newListButtonClicked()'> {{ stateService.active_list?.name }}</li>
 
     <!-- Rename List -->
     <li class="renameDisplay" *ngIf="shouldRenameList">
@@ -10,15 +10,6 @@
     </li>
 
   </div>
-  <div id="titles">
-    <table>
-      <tr>
-        <td id="tdLeft">Replenish</td>
-        <td id="tdRight">Items</td>
-      </tr>
-    </table>
-  </div>
-  <div id="leftColumn"></div>
-  <div id="rightColumn"></div>
+  <div id="content"></div>
   <div id="footer"></div>
 </div>
