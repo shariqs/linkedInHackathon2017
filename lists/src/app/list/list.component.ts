@@ -11,7 +11,7 @@ import { StateService } from '../Services/state.service';
 export class ListComponent {
 
   shouldRenameList : boolean = false;
-  showNewItemNameComboBox : boolean = false;
+  showNewItemNameComboBox : boolean = true;
 
   list_name_form : string = '';
   item_name_form : string = '';
@@ -27,12 +27,7 @@ export class ListComponent {
     this.dataService.updateUserList(this.list_name_form, this.stateService.active_list);
     this.shouldRenameList = false;
   }
-
-  private addItemButtonPressed() {
-    this.showNewItemNameComboBox = !this.showNewItemNameComboBox;
-  }
-
-   private onItemSubmit(){
+  private onItemSubmit(){
    this.dataService.addItemToList(this.stateService.active_list, this.item_name_form);
    this.shouldRenameList = false;
    this.item_name_form = '';
