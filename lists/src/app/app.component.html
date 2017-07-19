@@ -1,4 +1,4 @@
 <div id="appdiv"><app-login> </app-login></div>
-<app-sidebar></app-sidebar>
-<div id="verticalbar"></div>
-<app-list></app-list>
+<app-sidebar *ngIf='auth'></app-sidebar>
+<div id="verticalbar" *ngIf='auth'></div>
+<app-list *ngIf='auth'></app-list>
