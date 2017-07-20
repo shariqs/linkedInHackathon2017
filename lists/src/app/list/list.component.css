@@ -82,7 +82,7 @@ li {
     text-align: center;
     font-weight: bold;
     font-size: 32px;
-    font-style: normal;
+    font-family: 'Cantarell', sans-serif;
 }
 
 .renameDisplay {
