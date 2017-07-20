@@ -7,7 +7,7 @@
 }
 
 #break {
-    height: 29px;
+    height: 31px; /* Spacing from "new note" to the first note*/
     width: 100%;
     background-color:transparent;
 }

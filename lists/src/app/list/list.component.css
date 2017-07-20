@@ -1,8 +1,3 @@
-#wrapper {
-    width: 100%;
-    overflow-y: auto;
-}
-
 .tile {
     color:black;
     background-color: transparent;
@@ -58,12 +53,28 @@
 .glyphicon:hover {
     text-decoration: none;
 }
+
 #header {
-    width: 100%;
+    width: 79%;
     min-height: 90px;
     background-color:#464133;
     padding-top: 20px;
     color: #FFF;
+    position: fixed;
+    z-index: 10;
+}
+
+#add_button {
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+/* Button control */
+.form-control {
+    border-radius: 0px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #464133;
 }
 
 #collab {
@@ -98,14 +109,31 @@ li {
     background-color: transparent;
 }
 
+#wrapper {
+    width: 100%;
+    overflow-y: auto;
+    background-color: transparent;
+    height: calc(100% - 134px);
+    margin-top:134px;
+}
+
 /* Right column for content */
 .content {
     width: 100%;
-    min-height: 25px;
+    height: 100%;
     background-color: #F9C728;
     overflow-y: auto;
 }
 
-.form-control{
-    text-align: center;
-}
+/* Second defined scrollbar specifically for the item list*/
+::-webkit-scrollbar {
+      width: 8px;
+} /* Scrollbar width */
+
+::-webkit-scrollbar-track {
+      background-color: #464133;
+} /* Scrollbar background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, .3); 
+} /* Scrollbar scrolling part */
