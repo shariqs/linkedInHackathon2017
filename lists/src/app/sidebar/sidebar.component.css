@@ -7,9 +7,23 @@
 }
 
 #break {
-    height: 31px; /* Spacing from "new note" to the first note*/
+    height: 34px; /* Spacing from "new note" to the first note*/
     width: 100%;
     background-color:transparent;
+}
+
+.new_note {
+    list-style-type: none;
+}
+
+/* Button control */
+.form-control {
+    border-radius: 0px;
+    width: 20%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    z-index: 10;
 }
 
 .glyphicon-remove{
