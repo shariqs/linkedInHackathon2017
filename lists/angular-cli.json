@@ -38,5 +38,9 @@
     "defaults": {
         "styleExt": "css",
         "prefixInterfaces": false
-    }
+    },
+    "assets": [
+        "assets",
+        "src/images/logo_small.png"
+    ]
 }
