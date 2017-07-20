@@ -5,19 +5,38 @@ app-sidebar{
     background-color:#F9C728;
     overflow-y: auto;
 }
-#appdiv {
-    width: 79%;
-    min-height: 5px;
-    background-color: transparent;
-    position: absolute;
-    Left: 21%;
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #26241C;
     z-index: 10;
 }
+#logo {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    float: left;
+    background-image: url(../images/logo_small.png);
+    margin-left: 25px;
+    margin-top: 5px;
+}
+#logoText {
+    min-width: 50px;
+    min-height: 5px;
+    background-color: transparent;
+    float: left;
+    font-size: 36px;
+    color: white;
+    margin-top: 8px;
+    margin-left: 25px;
+    font-family: 'Shadows Into Light', cursive;
+}
 app-login {
-    position: relative;
-    right: 0px;
+    float: right;
+    left: 300px;
     z-index: 1;
     text-align: right;
+    margin-top: 13px;
 }
 #verticalbar {
     position: absolute;

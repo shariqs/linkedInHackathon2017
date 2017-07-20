@@ -3,20 +3,24 @@
     position:fixed;
     left: 0px;
     z-index: 2;
+    border-radius: 0px;
 }
+
 #break {
     height: 29px;
     width: 100%;
     background-color:transparent;
 }
+
 .glyphicon-remove{
     float: right;
 }
 
 .tile{
     text-align: center;
-    border-bottom: 3px solid #667A8C;
+    border-bottom: 2px solid #667A8C;
     background-color: #F9C728;
+    margin: 0px;
 }
 
 .tile:hover {

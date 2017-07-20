@@ -1,5 +1,5 @@
 
-<button type="button" class="btn btn-primary" style="border: none;" (click)='newListButtonClicked()'> + New Lists </button>
+<button type="button" class="btn btn-primary" style="border: none;" (click)='newListButtonClicked()'> + New Note </button>
 <div id="break"></div>
 <li class="list-group-item tile" *ngFor="let list of dataService?.listKeys; let i = index" (click)='listChosen(list)'> {{ dataService.getListCacheDataFromKey(list.$value)?.name | uppercase }} 
 <i class='glyphicon glyphicon-remove' (click)='dataService.removeListByIndex(i)'> </i>  </li> 
