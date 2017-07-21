@@ -1,4 +1,4 @@
-  <!-- HEAD SECTION -->
+<!-- HEAD SECTION -->
   <div id="header">
     <!-- Display List Name-->
     <li class="nameDisplay" *ngIf="!shouldRenameList" (dblclick)='newListButtonClicked()'> {{ dataService.getListCacheDataFromKey(stateService.active_list)?.name | uppercase }}</li>
@@ -9,7 +9,7 @@
     </li>
 
     <!-- Collab code -->
-    <div id="collab" *ngIf="stateService.active_list"> COLLAB CODE: {{stateService.active_list}}</div>
+    <div id="collab" *ngIf="stateService.active_list"> <span id="collabcode">COLLAB CODE:</span> {{stateService.active_list}}</div>
 
     <!-- Add Item button (only show if playlist selected) -->
     <li *ngIf="stateService.active_list" id="add_button"><input autofocus class="form-control" [(ngModel)]="item_name_form" (keydown.enter)="onItemSubmit()" placeholder="Add Item" (keydown.esc)="showNewItemNameComboBox = false"></li>
@@ -19,10 +19,15 @@
   <!-- CONTENT SECTION (DISPLAYED ITEMS) -->
   <div class="content"  *ngIf = 'stateService.active_list'>
     <li class="list-group-item tile" *ngFor="let item of dataService.getListCacheDataFromKey(stateService.active_list).list_items; let i = index" (dblclick)='checkedClicked(i, item)'>
-      <a class='glyphicon glyphicon-ok' [class.checked]='item.checked' (click)='checkedClicked(i, item)'> </a>
-        {{ item.name }}  
-      <i class='glyphicon glyphicon-remove' (click)='itemRemoveButtonClicked(i)'> </i>
-      <span class="username"> -{{ item.author }} </span> 
+      <!-- Checkmark -->
+      <div class="checkmarkDiv"> <a class='glyphicon glyphicon-ok' [class.checked]='item.checked' (click)='checkedClicked(i, item)'> </a> </div>
+      <!-- Item -->
+      <div class="itemDiv"> {{ item.name }} </div>
+      <!-- Author (who wrote each listed item) -->
+      <div class="authorDiv"> <span class="username"> -{{ item.author }} </span> </div>
+      <!-- X button -->
+      <div class="glyphDiv"> <i class='glyphicon glyphicon-remove' (click)='itemRemoveButtonClicked(i)'></i> </div>
+      <div class="clear"></div>
     </li>
   </div>
  

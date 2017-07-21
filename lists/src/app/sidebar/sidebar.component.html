@@ -1,7 +1,10 @@
 
 <button type="button" *ngIf="!showNewListComboBox" class="btn btn-primary" style="border: none;" (click)='newListButtonClicked()'> + New Note </button>
-<li class="new_note" *ngIf="showNewListComboBox"><input autofocus class="form-control" [(ngModel)]="list_name_form" (keydown.enter)="onlistSubmit()" placeholder="Enter Note Name" (keydown.esc)="showNewListComboBox = false"></li>
+<li class="new_note" *ngIf="showNewListComboBox"><input autofocus class="form-control" maxlength="20" [(ngModel)]="list_name_form" (keydown.enter)="onlistSubmit()" placeholder="Enter Note Name" (keydown.esc)="showNewListComboBox = false"></li>
 
 <div id="break"></div>
-<li class="list-group-item tile" *ngFor="let list of dataService?.listKeys; let i = index" (click)='listChosen(list)'> {{ dataService.getListCacheDataFromKey(list.$value)?.name | uppercase }} 
-<i class='glyphicon glyphicon-remove' (click)='dataService.removeListByIndex(i)'> </i>  </li> 
+<li class="list-group-item tile" *ngFor="let list of dataService?.listKeys; let i = index" (click)='listChosen(list)'> 
+    <div class="noteText"> {{ dataService.getListCacheDataFromKey(list.$value)?.name | uppercase }} </div>
+    <div class="gliphy"> <i class='glyphicon glyphicon-remove' (click)='dataService.removeListByIndex(i)'></i> </div>  
+    <div class="clear"></div>
+</li> 

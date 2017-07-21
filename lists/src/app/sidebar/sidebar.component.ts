@@ -11,7 +11,7 @@ export class SidebarComponent {
 
   showNewListComboBox : boolean = false;
   list_name_form : string = '';
-
+  
   constructor(public dataService : DataService, public stateService: StateService ) { }
 
   private newListButtonClicked(){
