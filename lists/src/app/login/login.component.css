@@ -15,3 +15,8 @@
       min-height: 100%;
       background-color: transparent;
   }
+
+  @media only screen and (max-width: 600px) {
+    button { margin: 5px 10px; }
+    .login-font { font-size: 12px; }
+}

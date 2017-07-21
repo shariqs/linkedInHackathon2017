@@ -64,3 +64,11 @@ app-list {
 ::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, .3); 
 } /* Scrollbar scrolling part */
+
+@media only screen and (max-width: 600px) {
+    app-sidebar{ width: 30%; font-size: 12px; }
+    #logo { margin-left: 10px; margin-top: 5px; }
+    #logoText { font-size: 24px; margin-top: 17px; margin-left: 10px; }
+    #verticalbar { display: none; }
+    app-list { width: 70%; font-size: 12px; }
+}
